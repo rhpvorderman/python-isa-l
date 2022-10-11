@@ -160,18 +160,8 @@ def build_isa_l(compiler_command: str, compiler_options: str):
 
 
 setup(
-    name="isal",
-    version="1.1.0-dev",
-    description="Faster zlib and gzip compatible compression and "
-                "decompression by providing python bindings for the ISA-L "
-                "library.",
-    author="Leiden University Medical Center",
-    author_email="r.h.p.vorderman@lumc.nl",  # A placeholder for now
-    long_description=Path("README.rst").read_text(),
-    long_description_content_type="text/x-rst",
     cmdclass={"build_ext": BuildIsalExt},
     license="PSF-2.0",
-    keywords="isal isa-l compression deflate gzip igzip",
     zip_safe=False,
     packages=find_packages('src'),
     package_dir={'': 'src'},
@@ -180,24 +170,5 @@ setup(
                            # with the binary distribution.
                            'isa-l/LICENSE', 'isa-l/README.md',
                            'isa-l/Release_notes.txt']},
-    url="https://github.com/pycompression/python-isal",
-    classifiers=[
-        "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: Implementation :: CPython",
-        "Programming Language :: Python :: Implementation :: PyPy",
-        "Programming Language :: C",
-        "Development Status :: 5 - Production/Stable",
-        "Topic :: System :: Archiving :: Compression",
-        "License :: OSI Approved :: Python Software Foundation License",
-        "Operating System :: POSIX :: Linux",
-        "Operating System :: MacOS",
-        "Operating System :: Microsoft :: Windows",
-    ],
-    python_requires=">=3.7",  # We use METH_FASTCALL
     ext_modules=EXTENSIONS
 )
