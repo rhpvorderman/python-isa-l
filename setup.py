@@ -161,14 +161,5 @@ def build_isa_l(compiler_command: str, compiler_options: str):
 
 setup(
     cmdclass={"build_ext": BuildIsalExt},
-    license="PSF-2.0",
-    zip_safe=False,
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    package_data={'isal': ['*.pyi', 'py.typed',
-                           # Include isa-l LICENSE and other relevant files
-                           # with the binary distribution.
-                           'isa-l/LICENSE', 'isa-l/README.md',
-                           'isa-l/Release_notes.txt']},
     ext_modules=EXTENSIONS
 )
