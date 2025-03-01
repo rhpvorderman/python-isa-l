@@ -12,6 +12,7 @@ version develop
 -----------------
 + Use upstream ISA-L version 2.31.1 which includes patches to make 
   installation possible.
++ Make GNU/Hurd a supported platform.
 
 version 1.7.1
 -----------------
